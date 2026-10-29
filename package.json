@@ -1,0 +1,20 @@
+{
+  "name": "lbs-interior-design",
+  "version": "1.0.0",
+  "private": true,
+  "description": "L$B Interior Design paint and POP materials storefront.",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check project.js && node --check admin.js && node --check admin-login.js && node --check account.js && node --check store-info.js",
+    "android:sync": "cap sync android",
+    "ios:sync": "cap sync ios",
+    "android:open": "cap open android",
+    "ios:open": "cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/cli": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/ios": "^8.6.0"
+  }
+}

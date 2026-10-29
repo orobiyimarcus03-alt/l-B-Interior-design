@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store admin | L$B Interior Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="admin-page">
+    <header class="admin-header">
+        <a href="/" class="logo"><span>L$B</span> L$B Interior Design</a>
+        <div class="admin-header-actions">
+            <span>Admin dashboard</span>
+            <button type="button" class="secondary-btn" id="logoutButton">Sign out</button>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="admin-heading">
+            <div>
+                <p class="eyebrow">STORE MANAGEMENT</p>
+                <h1>Products & orders</h1>
+                <p>Manage paint and POP materials only.</p>
+            </div>
+        </div>
+
+        <section class="admin-panel" aria-labelledby="productHeading">
+            <div class="admin-panel-heading">
+                <div>
+                    <p class="eyebrow">CATALOG</p>
+                    <h2 id="productHeading">Products</h2>
+                </div>
+                <button type="button" class="secondary-btn" id="cancelEdit" hidden>Cancel edit</button>
+            </div>
+            <form id="productForm" class="admin-form">
+                <input type="hidden" name="id">
+                <label>Product name<input name="name" required maxlength="100"></label>
+                <label>Category
+                    <select name="category" required>
+                        <option>Paint</option>
+                        <option>POP Materials</option>
+                    </select>
+                </label>
+                <label>Price (₦)<input name="price" type="number" min="1" step="1" required></label>
+                <label>Stock quantity<input name="stock" type="number" min="0" step="1" required></label>
+                <label class="admin-form-wide">Description<textarea name="description" rows="3" maxlength="500" required></textarea></label>
+                <label class="admin-form-wide">Image URL (optional)<input name="image" type="url" maxlength="500" placeholder="https://..."></label>
+                <div class="admin-form-actions admin-form-wide">
+                    <p class="form-message" id="productMessage" role="status"></p>
+                    <button class="primary-btn" type="submit">Save product</button>
+                </div>
+            </form>
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead>
+                    <tbody id="productRows"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="admin-panel" aria-labelledby="orderHeading">
+            <div class="admin-panel-heading">
+                <div>
+                    <p class="eyebrow">CUSTOMER ACTIVITY</p>
+                    <h2 id="orderHeading">Orders</h2>
+                </div>
+                <button type="button" class="secondary-btn" id="refreshOrders">Refresh</button>
+            </div>
+            <p class="form-message" id="orderAdminMessage" role="status"></p>
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <thead><tr><th>Order</th><th>Customer</th><th>Contact</th><th>Items</th><th>Total</th><th>Status</th></tr></thead>
+                    <tbody id="orderRows"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="/admin.js" defer></script>
+</body>
+</html>

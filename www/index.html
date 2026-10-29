@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>L$B Interior Design | Finishing Materials</title>
+    <meta name="description" content="Shop quality paint and POP materials from L$B Interior Design. Browse products, place an order, and contact the store for delivery details.">
+    <meta name="theme-color" content="#20201d">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <a href="#" class="logo">
+        <span>L$B</span>
+        L$B Interior Design
+    </a>
+
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Materials</a>
+        <a href="#about">About</a>
+        <a href="#help">Help</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+        <button class="search-btn" id="openSearch" aria-label="Search products">⌕</button>
+
+        <button class="cart-btn" id="openCart" aria-label="Open shopping cart">
+            🛒
+            <span id="cartCount">0</span>
+        </button>
+
+        <a href="/account" class="login-btn account-nav-link">My account</a>
+        <a href="/admin" class="login-btn">Admin</a>
+
+        <button class="menu-btn" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+</header>
+
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#categories">Materials</a>
+    <a href="#about">About</a>
+    <a href="#help">Help</a>
+    <a href="#contact">Contact</a>
+    <a href="/account">My account</a>
+    <a href="/admin">Admin</a>
+</div>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">QUALITY • STYLE • BEAUTY</p>
+
+        <h1>
+            Build a space
+            <span>you'll love.</span>
+        </h1>
+
+        <p class="hero-text">
+            Find quality paint and POP materials for your next
+            project, all in one place.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#shop" class="primary-btn">
+                Shop now →
+            </a>
+
+            <a href="#categories" class="secondary-btn">
+                Explore materials
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div>
+                <strong>2</strong>
+                <small>Categories</small>
+            </div>
+
+            <div>
+                <strong>Easy</strong>
+                <small>Ordering</small>
+            </div>
+
+            <div>
+                <strong>Local</strong>
+                <small>Support</small>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+        <div class="floating-card">
+            <span>✨</span>
+            <div>
+                <strong>Premium Finish</strong>
+                <small>Made for beautiful spaces</small>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">SHOP BY CATEGORY</p>
+            <h2>Paint and POP materials.</h2>
+        </div>
+
+        <a href="#shop" class="view-link">View all →</a>
+    </div>
+
+    <div class="categories">
+
+        <a href="#shop" class="category-card paint" data-category="Paint">
+            <div class="category-icon">🎨</div>
+            <h3>Paint</h3>
+            <p>Premium colours & finishes</p>
+            <span>Shop →</span>
+        </a>
+
+        <a href="#shop" class="category-card pop" data-category="POP Materials">
+            <div class="category-icon">🏠</div>
+            <h3>POP Materials</h3>
+            <p>Quality ceiling materials</p>
+            <span>Shop →</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- SHOP -->
+<section class="section shop-section" id="shop">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">OUR PRODUCTS</p>
+            <h2>Available products.</h2>
+        </div>
+
+        <label class="filter-label" for="categoryFilter">Show
+            <select class="filter-btn" id="categoryFilter">
+                <option value="all">All products</option>
+                <option value="Paint">Paint</option>
+                <option value="POP Materials">POP Materials</option>
+            </select>
+        </label>
+    </div>
+
+
+    <div class="products" id="products" aria-live="polite"></div>
+    <p class="store-message" id="storeMessage" role="status"></p>
+
+</section>
+
+
+<!-- BANNER -->
+<section class="promo">
+
+    <div>
+        <p class="eyebrow">MAKE YOUR SPACE BEAUTIFUL</p>
+
+        <h2>
+            Your dream interior
+            starts here.
+        </h2>
+
+        <p>
+            Shop quality paint and POP materials for your next project.
+        </p>
+
+        <a href="#shop" class="primary-btn">
+            Start shopping →
+        </a>
+    </div>
+
+    <div class="promo-circle">
+        <span>✦</span>
+    </div>
+
+</section>
+
+<!-- ORDER TRACKING -->
+<section class="section help-section" id="help">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">ORDER SUPPORT</p>
+            <h2>Need an update?</h2>
+        </div>
+    </div>
+    <div class="help-grid">
+        <form class="help-card tracking-form" id="trackingForm">
+            <h3>Track an order</h3>
+            <p>Enter your order number and the phone number used at checkout.</p>
+            <label for="trackingId">Order number</label>
+            <input id="trackingId" name="orderId" placeholder="MP-XXXXXXXX" required maxlength="20">
+            <label for="trackingPhone">Phone number</label>
+            <input id="trackingPhone" name="phone" type="tel" autocomplete="tel" required maxlength="30">
+            <button type="submit" class="primary-btn">Check order</button>
+            <p id="trackingMessage" class="form-message" role="status"></p>
+        </form>
+        <div class="help-card">
+            <h3>Delivery & payment</h3>
+            <p>After you place an order, the store will confirm product availability, delivery options and any delivery charge before it is processed.</p>
+            <p>This site does not collect online payments. Wait for store confirmation and use only a payment method confirmed by the store.</p>
+            <div class="store-contact" id="storeContact">Store contact details are not configured yet.</div>
+        </div>
+    </div>
+    <div class="faq-list">
+        <details>
+            <summary>When is my order confirmed?</summary>
+            <p>Your order is received as pending. The store will contact you to confirm availability and delivery before processing it.</p>
+        </details>
+        <details>
+            <summary>What if an item is damaged or incorrect?</summary>
+            <p>Keep the item and packaging, and contact the store with your order number and a description of the issue so it can be reviewed.</p>
+        </details>
+        <details>
+            <summary>What happens to my checkout details?</summary>
+            <p>Your name, phone number and delivery address are saved with the order and visible to the store administrator for order fulfilment. The administrator can choose to open your delivery address in Google Maps; your address is sent to Google only if that link is opened. Do not include unnecessary sensitive information.</p>
+        </details>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="about section" id="about">
+
+    <div class="about-image">
+        <div class="about-shape"></div>
+    </div>
+
+    <div class="about-content">
+
+        <p class="eyebrow">ABOUT MOM'S POP & PAINT</p>
+
+        <h2>
+            Quality materials.
+            Beautiful results.
+        </h2>
+
+        <p>
+            L$B Interior Design provides quality interior finishing
+            materials for homeowners, decorators, builders and
+            professionals.
+        </p>
+
+        <p>
+            We focus on two essentials: premium paint and reliable
+            POP materials for homes, builders and decorators.
+        </p>
+
+        <a href="#shop" class="primary-btn">
+            Explore our store →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer id="contact">
+
+    <div class="footer-main">
+
+        <div>
+            <a href="#" class="logo footer-logo">
+                <span>L$B</span>
+                L$B Interior Design
+            </a>
+
+            <p>
+                Quality materials for beautiful spaces.
+            </p>
+        </div>
+
+        <div>
+            <h4>Store</h4>
+            <a href="#shop">All products</a>
+            <a href="#categories">Categories</a>
+            <a href="#">New arrivals</a>
+        </div>
+
+        <div>
+            <h4>Help</h4>
+            <a href="#contact">Contact the store</a>
+            <a href="/policies#delivery">Delivery information</a>
+            <a href="/policies#returns">Returns information</a>
+            <a href="/policies#privacy">Privacy</a>
+            <a href="/policies#terms">Terms</a>
+        </div>
+
+        <div>
+            <h4>Account</h4>
+            <a href="/admin">Admin sign in</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© <span id="currentYear">2026</span> L$B Interior Design. All rights reserved.</p>
+
+        <p>Made for beautiful spaces ✦</p>
+    </div>
+
+</footer>
+
+
+<!-- SEARCH MODAL -->
+<div class="overlay" id="searchOverlay">
+
+    <div class="search-box">
+
+        <button class="close" type="button" aria-label="Close search">×</button>
+
+        <p class="eyebrow">SEARCH STORE</p>
+
+        <h2>What are you looking for?</h2>
+
+        <input id="searchInput"
+            type="text"
+            placeholder="Search paint or POP materials..."
+        >
+
+        <button class="primary-btn" id="searchSubmit" type="button">Search</button>
+
+    </div>
+
+</div>
+
+
+<!-- CART -->
+<div class="overlay" id="cartOverlay">
+
+    <div class="cart-box">
+
+        <button class="close" type="button" aria-label="Close cart">×</button>
+
+        <p class="eyebrow">YOUR CART</p>
+
+        <h2>Your shopping cart</h2>
+
+        <div id="cartContents"></div>
+        <p class="cart-total" id="cartTotal"></p>
+        <p id="cartMessage" role="status">Your cart is currently empty.</p>
+        <button class="primary-btn" id="checkoutButton" type="button" disabled>Place order →</button>
+
+    </div>
+
+</div>
+
+<!-- ORDER DETAILS -->
+<div class="overlay" id="orderOverlay">
+    <form class="cart-box order-box" id="orderForm">
+        <button class="close" type="button" data-close-order aria-label="Close">×</button>
+        <p class="eyebrow">DELIVERY DETAILS</p>
+        <h2>Place your order</h2>
+        <label for="customerName">Full name</label>
+        <input id="customerName" name="name" autocomplete="name" required maxlength="100">
+        <label for="customerPhone">Phone number</label>
+        <input id="customerPhone" name="phone" type="tel" autocomplete="tel" required maxlength="30">
+        <label for="customerEmail">Email (optional)</label>
+        <input id="customerEmail" name="email" type="email" autocomplete="email" maxlength="254">
+        <label for="customerAddress">Delivery address</label>
+        <textarea id="customerAddress" name="address" autocomplete="street-address" required maxlength="500"></textarea>
+        <label class="checkout-consent">
+            <input id="acceptedPrivacy" name="acceptedPrivacy" type="checkbox" required>
+            <span>I have read the <a href="/policies#privacy" target="_blank" rel="noopener">privacy information</a> and understand my delivery address may be shared with Google Maps if the store opens the map link.</span>
+        </label>
+        <p class="form-message" id="orderMessage" role="status"></p>
+        <button class="primary-btn" type="submit">Confirm order</button>
+    </form>
+</div>
+
+<dialog class="order-confirmation" id="orderConfirmation">
+    <button class="close" type="button" id="closeConfirmation" aria-label="Close">×</button>
+    <p class="eyebrow">ORDER RECEIVED</p>
+    <h2>Thank you for your order.</h2>
+    <p>Your order is pending store confirmation. Save this order number to check its status:</p>
+    <strong class="confirmation-number" id="confirmationNumber"></strong>
+    <p>Delivery charges and payment will be confirmed by the store before your order is processed.</p>
+    <button class="primary-btn" type="button" id="confirmationDone">Continue shopping</button>
+</dialog>
+
+<script src="/project.js" defer></script>
+<script src="/store-info.js" defer></script>
+
+</body>
+</html>

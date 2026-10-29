@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "id": "paint-premium-wall",
+      "name": "Premium Wall Paint",
+      "category": "Paint",
+      "description": "Durable interior wall paint with a smooth, elegant finish.",
+      "price": 35000,
+      "stock": 25,
+      "image": ""
+    },
+    {
+      "id": "pop-ceiling-board",
+      "name": "POP Ceiling Board",
+      "category": "POP Materials",
+      "description": "Quality plasterboard for clean, durable ceiling finishes.",
+      "price": 18500,
+      "stock": 40,
+      "image": ""
+    },
+    {
+      "id": "pop-joint-filler",
+      "name": "POP Joint Filler",
+      "category": "POP Materials",
+      "description": "Smooth-setting filler for joints and interior plasterwork.",
+      "price": 9500,
+      "stock": 30,
+      "image": ""
+    },
+    {
+      "id": "pop-plaster-powder",
+      "name": "POP Plaster Powder",
+      "category": "POP Materials",
+      "description": "Fine plaster powder for smooth ceiling and wall finishing.",
+      "price": 12000,
+      "stock": 25,
+      "image": ""
+    }
+  ],
+  "orders": [],
+  "customers": []
+}

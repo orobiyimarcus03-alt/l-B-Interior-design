@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="theme-color" content="#20201d">
+    <title>My account | L$B Interior Design</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="admin-page">
+    <header class="admin-header">
+        <a href="/" class="logo"><span>L$B</span> L$B Interior Design</a>
+        <a href="/" class="secondary-btn">Back to store</a>
+    </header>
+    <main class="account-main">
+        <section class="account-card" id="accountAccess">
+            <p class="eyebrow">CUSTOMER ACCOUNT</p>
+            <h1 id="accountTitle">Sign in</h1>
+            <p class="account-intro">Sign in to view orders placed while signed in, or create an account. Guest checkout remains available.</p>
+            <div class="account-tabs" role="group" aria-label="Account options">
+                <button type="button" class="account-tab active" id="showLogin">Sign in</button>
+                <button type="button" class="account-tab" id="showSignup">Create account</button>
+            </div>
+            <form id="loginForm" class="account-form">
+                <label for="loginEmail">Email</label>
+                <input id="loginEmail" name="email" type="email" autocomplete="email" required maxlength="254">
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" name="password" type="password" autocomplete="current-password" required maxlength="128">
+                <button class="primary-btn" type="submit">Sign in</button>
+            </form>
+            <form id="signupForm" class="account-form" hidden>
+                <label for="signupName">Full name</label>
+                <input id="signupName" name="name" autocomplete="name" required maxlength="100">
+                <label for="signupEmail">Email</label>
+                <input id="signupEmail" name="email" type="email" autocomplete="email" required maxlength="254">
+                <label for="signupPhone">Phone number</label>
+                <input id="signupPhone" name="phone" type="tel" autocomplete="tel" required maxlength="30">
+                <label for="signupPassword">Password (at least 10 characters)</label>
+                <input id="signupPassword" name="password" type="password" autocomplete="new-password" required minlength="10" maxlength="128">
+                <label class="account-consent">
+                    <input type="checkbox" name="acceptedPolicies" required>
+                    <span>I have read the <a href="/policies#privacy" target="_blank" rel="noopener">privacy</a> and <a href="/policies#terms" target="_blank" rel="noopener">ordering information</a>.</span>
+                </label>
+                <button class="primary-btn" type="submit">Create account</button>
+            </form>
+            <p class="form-message" id="accountMessage" role="status"></p>
+            <p class="account-note">Email is used as your sign-in name and is not verified by email. Password reset by email is not available yet. Keep your password safe.</p>
+        </section>
+
+        <section class="account-card account-dashboard" id="accountDashboard" hidden>
+            <p class="eyebrow">CUSTOMER ACCOUNT</p>
+            <h1>Welcome, <span id="customerName"></span></h1>
+            <p id="customerContact" class="account-intro"></p>
+            <div class="account-section-heading">
+                <h2>Your orders</h2>
+                <button class="secondary-btn" id="accountLogout" type="button">Sign out</button>
+            </div>
+            <div class="account-order-list" id="accountOrders"></div>
+            <details class="password-panel">
+                <summary>Change password</summary>
+                <form id="passwordForm" class="account-form">
+                    <label for="currentPassword">Current password</label>
+                    <input id="currentPassword" name="currentPassword" type="password" autocomplete="current-password" required maxlength="128">
+                    <label for="newPassword">New password (at least 10 characters)</label>
+                    <input id="newPassword" name="newPassword" type="password" autocomplete="new-password" required minlength="10" maxlength="128">
+                    <button class="primary-btn" type="submit">Update password</button>
+                </form>
+            </details>
+            <p class="form-message" id="passwordMessage" role="status"></p>
+        </section>
+    </main>
+    <script src="/account.js" defer></script>
+</body>
+</html>
